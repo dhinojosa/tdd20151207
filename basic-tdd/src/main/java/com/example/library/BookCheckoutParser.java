@@ -14,6 +14,14 @@ public class BookCheckoutParser {
 		("Provided data is invalid: []");
 		
 		String[] items = data.split("~");
+		
+		if (items.length < 3) {
+			throw new 
+			IllegalArgumentException
+			(String.format("Expected 3 Items, but got %d: [%s]",
+					items.length, data));
+		}
+		
 		LocalDate parsedDate = null;
 		String dateString = items[2];
 		
@@ -25,6 +33,7 @@ public class BookCheckoutParser {
 				   PROVIDED_CHECKOUT_DATE_IS_INVALID_MSG,
 				   dateString),dpe);	
 		}
+		
 		return new BookCheckout
 		(items[0], items[1], parsedDate);
 	}

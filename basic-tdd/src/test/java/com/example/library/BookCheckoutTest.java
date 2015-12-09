@@ -7,8 +7,10 @@ import java.time.LocalDate;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import org.junit.rules.ExpectedException;
 
 import com.example.UnitTest;
 
@@ -98,7 +100,24 @@ public class BookCheckoutTest {
 			("Provided Patron Name is invalid: []");
 		}
 	}
-	
+	/*
+	 @Rule
+     public ExpectedException thrown = 
+            ExpectedException.none();
+    
+     @Test
+     public void testRequiredFieldsTitleIsEmpty() {
+           String patronName = "Elvis";
+           String title = "";
+           LocalDate date = LocalDate.of(1888, 2, 12);
+          
+           thrown.expect(IllegalArgumentException.class);
+           thrown.expectMessage("Title cannot be empty.");
+          
+           BookCheckout bookCheckout =
+                     new BookCheckout(patronName, title, date);
+     }*/
+
 	@Test
 	@Category(value=UnitTest.class)
 	public void testTitleIsNotEmpty() {
