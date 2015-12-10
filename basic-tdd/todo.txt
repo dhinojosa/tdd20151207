@@ -14,9 +14,10 @@ To do item:
 -----------
 1. Create a model (2)(~Done)
 2. Compute fee based on two dates
-3. Parse Line (1) 
+3. Parse Line (1)(done) 
 4. Define API (1?)
 5. Parse a Document/Stream
+
 6. Module that accepts List of models
 7. Sort?
 8. Filter find the top 5 offenders
